@@ -1,0 +1,16 @@
+centos:
+
+  1.https://www.cnblogs.com/starof/p/4680083.html   centos7安装mysql-server失败
+  2.mysql安装：菜鸟教程
+  3.https://blog.csdn.net/u012486840/article/details/52610320     安装ngnix
+  4.yum
+  5.ngnix
+  https://www.linuxidc.com/Linux/2016-09/134907.htm
+  6.python升级
+  https://blog.csdn.net/liang19890820/article/details/51079633
+  7.Google配置代理
+  https://github.com/FelisCatus/SwitchyOmega/wiki/GFWList
+  8.连接本地虚拟机
+  http://www.linuxdiyf.com/linux/29379.html              要启动ssh
+  9.web3.js官网
+  https://github.com/ethereum/wiki/wiki/JavaScript-API

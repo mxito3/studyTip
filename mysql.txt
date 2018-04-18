@@ -1,0 +1,6 @@
+1.创建
+mysqladmin -u root -p create CoPilot
+2.导入表
+source a.sql
+3.root
+mysql -u root -p

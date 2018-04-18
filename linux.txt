@@ -1,0 +1,59 @@
+linux
+
+
+	1.bin下是一些用户。（普通）
+	2.sbin下发的是超级用户的命令。
+	3.ls列出当前目录下的所有文件和目录。
+	4.ls -l   long
+	5.ls -l bin列出当前目录下的bin
+	6.ls -l | wc -l   计数当前目录下的文件数量
+	7.date [+fromat]
+	参数：%m
+      		%d
+      	%y
+      	date +%m  (调用)
+	8.cal显示日历
+	9.who -h显示当前有多少人链接。
+	输出第二个参数是登陆方式
+	10.who am i 我是谁
+	11.who -q 统计登陆用户数量
+	12.man 可向用户提供系统中各种命令，系统调用，库函数和重要系统文件的详细说明。
+	13.系统调用：内核提供的接口
+	14.printf：c标准库函数，是编译后的二进制。
+	15.hosts  域名解析
+	16.！122执行history里面的122条记录
+	17.pwd输出当前绝对目录。绝对目录从根目录开始计算
+	18.ls -a显示隐藏文件
+	19.ls -i获得pid
+	20.boot启动分区，内核核心。
+  21.su root
+  22.|    管道命令，例：p1 | p2 将p1的标准输出作为p2的标准输入
+  23.每执行一次命令就检查一次权限位。
+  24.普通用户的文件如果设置为不可执行，超级用户是不能执行的，但是得设定一下就可以执行。
+  25.chmod改变权限
+                  ------当前用户   同组用户   其他用户
+  26.新建user sudo adduser username
+                    su user //切换User
+  27.超级用户目录在/root下
+  28.mkdir
+              -p创建整个目录
+              -i删除目录（空目录才可以）
+  29.cp  a b c把ab拷贝到c
+  30.mv       剪贴
+  31.touch a创建一个文件
+  32.rm -rf fliename删除指定的文件
+  33.du -ch filename 查看文件占用空间（包括子目录）
+  34.find -ctime -1最近一天更改过的文件
+  35.cat filename  查看文件内容
+  36.df -h查看硬盘占用
+  37.下面我们看一下关于Ubuntu防火墙的命令。
+          ---查看状态
+          sudo ufw status
+          ---关闭
+          sudo ufw disable
+          ---开启
+          sudo ufw enable
+	38.如果要把文件解压到指定的目录下，需要用到-d参数。unzip -d /temp test.zip
+  39.后台守护进程       nohup command &
+  40.查看nohup日志      tail -fn 50 nohup.out
+  41.源列表              /etc/apt/sources.list
