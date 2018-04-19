@@ -1,4 +1,4 @@
-linux
+﻿linux
 
 
 	1.bin下是一些用户。（普通）
@@ -26,27 +26,27 @@ linux
 	18.ls -a显示隐藏文件
 	19.ls -i获得pid
 	20.boot启动分区，内核核心。
-  21.su root
-  22.|    管道命令，例：p1 | p2 将p1的标准输出作为p2的标准输入
-  23.每执行一次命令就检查一次权限位。
-  24.普通用户的文件如果设置为不可执行，超级用户是不能执行的，但是得设定一下就可以执行。
-  25.chmod改变权限
+  	21.su root
+  	22.|    管道命令，例：p1 | p2 将p1的标准输出作为p2的标准输入
+  	23.每执行一次命令就检查一次权限位。
+  	24.普通用户的文件如果设置为不可执行，超级用户是不能执行的，但是得设定一下就可以执行。
+  	25.chmod改变权限
                   ------当前用户   同组用户   其他用户
-  26.新建user sudo adduser username
+ 	 26.新建user sudo adduser username
                     su user //切换User
-  27.超级用户目录在/root下
-  28.mkdir
+  	27.超级用户目录在/root下
+  	28.mkdir
               -p创建整个目录
               -i删除目录（空目录才可以）
-  29.cp  a b c把ab拷贝到c
-  30.mv       剪贴
-  31.touch a创建一个文件
-  32.rm -rf fliename删除指定的文件
-  33.du -ch filename 查看文件占用空间（包括子目录）
-  34.find -ctime -1最近一天更改过的文件
-  35.cat filename  查看文件内容
-  36.df -h查看硬盘占用
-  37.下面我们看一下关于Ubuntu防火墙的命令。
+  	29.cp  a b c把ab拷贝到c
+  	30.mv       剪贴
+  	31.touch a创建一个文件
+  	32.rm -rf fliename删除指定的文件
+  	33.du -ch filename 查看文件占用空间（包括子目录）
+  	34.find -ctime -1最近一天更改过的文件
+  	35.cat filename  查看文件内容
+  	36.df -h查看硬盘占用
+  	37.下面我们看一下关于Ubuntu防火墙的命令。
           ---查看状态
           sudo ufw status
           ---关闭
@@ -54,6 +54,12 @@ linux
           ---开启
           sudo ufw enable
 	38.如果要把文件解压到指定的目录下，需要用到-d参数。unzip -d /temp test.zip
-  39.后台守护进程       nohup command &
-  40.查看nohup日志      tail -fn 50 nohup.out
-  41.源列表              /etc/apt/sources.list
+  	39.后台守护进程       nohup command &
+  	40.查看nohup日志      tail -fn 50 nohup.out
+  	41.源列表              /etc/apt/sources.list
+        42.查看所有端口对应的pid  netstat -anp
+        42.show active Internet connections (only servers)   netstat -tulpn
+        43.搜索进程pid     eg:pgrep geth
+                              ps -ef | grep geth
+        44.kill进程           kill -s 9 pid   9代表传递给进程的命令是关闭
+         
