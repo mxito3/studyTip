@@ -6,3 +6,6 @@ nohup  /mnt/go-ethereum-1.8.2/build/bin/geth --datadir "/mnt/ethereum" --rpcport
 tail -fn 50 nohup.out
 3.remix
 https://remix.ethereum.org/
+4.attach
+/mnt/ethereum/rinkeby/geth.ipc   找到ipc对应位置即可
+
