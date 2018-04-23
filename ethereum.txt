@@ -1,7 +1,7 @@
 1.datadir
   C:\Users\YP\AppData\Roaming\Ethereum
 2.命令：
-nohup /mnt/go-ethereum-1.8.2/build/bin/geth --rinkeby --datadir "/mnt/ethereum/rinkeby" --rpc --rpccorsdomain "*"  --rpcapi "personal,db,eth,net,web3,miner" --rpcaddr 0.0.0.0 &
+nohup /mnt/go-ethereum-1.8.2/build/bin/geth --rinkeby --datadir "/mnt/ethereum/rinkeby" --rpc --rpccorsdomain "*"  --rpcapi "personal,db,eth,net,web3,miner,admin" --rpcaddr 0.0.0.0 &
 nohup  /mnt/go-ethereum-1.8.2/build/bin/geth --datadir "/mnt/ethereum" --rpcport 8546 --port 8547&
 tail -fn 50 nohup.out
 3.remix
