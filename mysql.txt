@@ -4,3 +4,7 @@ mysqladmin -u root -p create CoPilot
 source a.sql
 3.root
 mysql -u root -p
+4.描述表
+desc tableName;(表格的形式)
+5.查看表的具体内容
+select * from tableName;
