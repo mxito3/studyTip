@@ -19,4 +19,8 @@ https://remix.ethereum.org/
  https://plus.google.com/101061466734214019919/posts/F4oc2DBvFG7
 6.查询交易记录
 https://rinkeby.etherscan.io/tx/0x3385d59913f60353e1601d80fa9aabd97719c5fc46ba6eea16611c71a5cb832a
+
+                                                             **开发**
+7.web3.js
+https://github.com/ethereum/wiki/wiki/JavaScript-API       
  
