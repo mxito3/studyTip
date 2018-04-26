@@ -68,5 +68,10 @@
 	48.？.txt   选择单字符txt文件
 	49.mkdir \             黑科技
 	50.mkdir uestc\ unix \是个转义符，这个用来创建一个带空格的文件夹
+	51.echo "time is `date`"         ``运行时插入文件
+	52.|              管道命令。将第一个的输入作为第一个的输出，用来进程间通信(单向),结果通过Buffer传播
+	    netstat -ant |grep LISTEN|grep 22|wc -l    wc用来计数（LISTEN大写）
+	    netstat -ant |grep ESTABLISHED|grep 22|wc -l 
+	
 	
 	
