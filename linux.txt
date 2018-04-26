@@ -62,4 +62,11 @@
         43.搜索进程pid     eg:pgrep geth
                               ps -ef | grep geth
         44.kill进程           kill -s 9 pid   9代表传递给进程的命令是关闭
-         
+	45.多条命令用  ;
+	46.>  重定向符号    ls;pwd >test.txt
+	47.*  选择任意文件
+	48.？.txt   选择单字符txt文件
+	49.mkdir \             黑科技
+	50.mkdir uestc\ unix \是个转义符，这个用来创建一个带空格的文件夹
+	
+	
