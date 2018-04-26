@@ -73,5 +73,7 @@
 	    netstat -ant |grep LISTEN|grep 22|wc -l    wc用来计数（LISTEN大写）
 	    netstat -ant |grep ESTABLISHED|grep 22|wc -l 
 	
+	53.>输出重定向（覆盖） >>不覆盖直接追加
+	54.logout登出
 	
 	
