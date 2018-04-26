@@ -11,4 +11,8 @@ geth --rinkeby --rpc --rpccorsdomain "*"  --rpcapi "personal,db,eth,net,web3,min
 https://remix.ethereum.org/
 4.attach use ipc
 /mnt/go-ethereum-1.8.2/build/bin/geth attach /mnt/ethereum/rinkeby/geth.ipc   找到ipc对应位置即可
-
+5.get rinkeby eth
+ https://faucet.rinkeby.io/
+ https://twitter.com/mxito3/status/988390838370582529
+ https://plus.google.com/101061466734214019919/posts/F4oc2DBvFG7
+ 
