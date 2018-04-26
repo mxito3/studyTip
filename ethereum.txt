@@ -1,5 +1,7 @@
 1.datadir
   C:\Users\YP\AppData\Roaming\Ethereum
+  
+                                                   **rinkeby**
 2.命令：
 服务器：
 nohup /mnt/go-ethereum-1.8.2/build/bin/geth --rinkeby --datadir "/mnt/ethereum/rinkeby" --rpc --rpccorsdomain "*"  --rpcapi "personal,db,eth,net,web3,miner,admin" --rpcaddr 0.0.0.0 &
@@ -15,4 +17,6 @@ https://remix.ethereum.org/
  https://faucet.rinkeby.io/
  https://twitter.com/mxito3/status/988390838370582529
  https://plus.google.com/101061466734214019919/posts/F4oc2DBvFG7
+6.查询交易记录
+https://rinkeby.etherscan.io/tx/0x3385d59913f60353e1601d80fa9aabd97719c5fc46ba6eea16611c71a5cb832a
  
