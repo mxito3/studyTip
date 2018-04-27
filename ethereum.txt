@@ -25,3 +25,6 @@ https://rinkeby.etherscan.io/tx/0x3385d59913f60353e1601d80fa9aabd97719c5fc46ba6e
 https://github.com/ethereum/wiki/wiki/JavaScript-API       
 2.nonce in transaction 
 is the number of transactions sent from a given address. Each time you send a transaction, the nonce increases by 1
+                                                              **links** 
+1.what is nonce
+  https://myetherwallet.github.io/knowledge-base/transactions/what-is-nonce.html
