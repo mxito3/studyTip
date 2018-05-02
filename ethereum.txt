@@ -28,3 +28,9 @@ is the number of transactions sent from a given address. Each time you send a tr
                                                               **links** 
 1.what is nonce
   https://myetherwallet.github.io/knowledge-base/transactions/what-is-nonce.html
+                   
+                   
+                                                             **本机主网**
+*********轻节点
+1.打开
+geth --syncmode "light" --rpc --rpccorsdomain "*"  --rpcapi "personal,db,eth,net,web3,miner,admin" --rpcaddr 0.0.0.0
