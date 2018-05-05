@@ -4,8 +4,8 @@
                                                    **rinkeby**
 2.命令：
 服务器：
-nohup /mnt/go-ethereum-1.8.2/build/bin/geth --rinkeby --datadir "/mnt/ethereum/rinkeby" --rpc --rpccorsdomain "*"  --rpcapi "personal,db,eth,net,web3,miner,admin" --rpcaddr 0.0.0.0 &
-nohup  /mnt/go-ethereum-1.8.2/build/bin/geth --datadir "/mnt/ethereum" --rpcport 8546 --port 8547&
+nohup /mnt/ethereum/go-ethereum-1.8.2/build/bin/geth --rinkeby --datadir "/mnt/ethereum/rinkeby" --rpc --rpccorsdomain "*"  --rpcapi "personal,db,eth,net,web3,miner,admin" --rpcaddr 0.0.0.0 &
+nohup /mnt/ethereum/go-ethereum-1.8.2/build/bin/geth --datadir "/mnt/ethereum" --rpcport 8546 --port 8547&
 tail -fn 50 nohup.out
 本机：
 geth --rinkeby --rpc --rpccorsdomain "*"  --rpcapi "personal,db,eth,net,web3,miner,admin" --rpcaddr 0.0.0.0 --bootnodes "enode://111e68cb3a8401ee42199fd64a0a460dc2c10b33cb74d97eb26f222600502842d296ced7172ed3da8884191dde2b04c6885f7240f39495eca7290efe553a278e@120.27.11.67:30303","enode://bda0e1b5db21b091332dcbbed16b53c8b14898f22d4b4b7f314b97440bc7ac841fdb16076e5dc220aea802d428ca8b35173eea9dae15e2632c1a3b06ebcf49c0@47.52.21.173:30303"
