@@ -8,3 +8,12 @@ mysql -u root -p
 desc tableName;(表格的形式)
 5.查看表的具体内容
 select * from tableName;
+# mariadb数据库的相关命令
+
+systemctl start mariadb  #启动MariaDB
+
+systemctl stop mariadb  #停止MariaDB
+
+systemctl restart mariadb  #重启MariaDB
+
+systemctl enable mariadb  #设置开机启动
