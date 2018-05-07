@@ -37,7 +37,12 @@ select text title from blog where text="i love such life" and  title like "%i" u
 15.排序
 select * from blog order by id asc;//升序
 select * from blog order by id desc;//降序
-16.
+16.分组
+select name, count(*) from employee_tbl group by name;   //根据name分组，结果是一个两列属性分别是name和count(*)的二维表,count(*)值是每个不同名字的数量 
+select name,sum(singin) as signinCount from employee_tbl group by name; //一列是name,另一列是signinCount(属性singin的和)
+select name,sum(singin) as signinCount from employee_tbl group by name with rollup;//with rollup在分组的基础上再进行一次相同的统计(sum,即给signin列求和，name属性是null)
+select coalesce(name,'总数'),sum(singin) as signinCount from employee_tbl group by name with rollup;//在上一条分组的基础上修改name值为空的记录的name属性是总数
+
 
 
 
