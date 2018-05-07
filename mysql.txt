@@ -1,15 +1,24 @@
-1.创建
-mysqladmin -u root -p create CoPilot
+
+**备注：Blog是表名和数据库名
+1.创建数据库
+mysqladmin -u root -p create Blog
+create database Blog;
 2.导入表
-source a.sql
+source a.sql;
 3.root
 mysql -u root -p
 4.描述表
 desc tableName;(表格的形式)
 5.查看表的具体内容
 select * from tableName;
+6.创建表
+create table if not exists blog(id int primary key auto_increment,title char not null,comment longtext not null);
+7.删除数据库
+mysqladmin -uroot -p drop Blog
+drop database Blog;
+8.删除表
+drop table Blog;
 ###################### mariadb数据库的相关命令
-
 systemctl start mariadb  #启动MariaDB
 
 systemctl stop mariadb  #停止MariaDB
