@@ -1,5 +1,5 @@
 
-**备注：Blog是表名和数据库名
+**备注：Blog是表名和数据库名，blog是表名字
 1.创建数据库
 mysqladmin -u root -p create Blog
 create database Blog;
@@ -9,7 +9,7 @@ source a.sql;
 mysql -u root -p
 4.描述表
 desc tableName;(表格的形式)
-5.查看表的具体内容
+5.读取数据表
 select * from tableName;
 6.创建表
 create table if not exists blog(id int primary key auto_increment,title char not null,comment longtext not null);
@@ -19,7 +19,30 @@ drop database Blog;
 8.删除表
 drop table Blog;
 9.插入内容：
-insert into Blog (id,title,comment)values(2,"hello","hello world")
+insert into Blog (id,title,comment)values(2,"hello","hello world")  //可以不插入id字段，因为是自增的
+insert into blog(title,text) values("ede","deede"),("dededede","defegrfgtg"); //插入多条数据
+10.where语句
+select * from blog where binary comment="hello Yp";                //binary指定区分大小写
+select * from blog where id>=1;  
+select id from blog where id>1;
+11.update语句
+update blog set text="i love such life" where id=4;
+12.delete语句
+delete from blog where id =1;    //删除blog表中id是1的记录
+13.like语句
+select * from blog where text like "%such%";     //%匹配所有字符串
+14.union语句
+select text from blog where text="i love such world! union select country from apps where country="cn";
+select text title from blog where text="i love such life" and  title like "%i" union select country from apps where country="cn";
+15.排序
+select * from blog order by id asc;//升序
+select * from blog order by id desc;//降序
+16.
+
+
+
+
+
 
 
 
