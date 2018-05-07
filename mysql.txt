@@ -1,5 +1,5 @@
 
-**备注：Blog是表名和数据库名，blog是表名字
+**备注：Blog是表名和数据库名，blog，employee_tbl是表名字
 1.创建数据库
 mysqladmin -u root -p create Blog
 create database Blog;
