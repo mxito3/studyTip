@@ -1,0 +1,4 @@
+1.显示当前目录下的文件
+dir /N
+2.找到某端口占用的进程并kill掉
+netstat -anp|  findstr port
