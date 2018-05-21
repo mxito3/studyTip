@@ -1,0 +1,2 @@
+1.unix编译cpp
+g++ helloworld.cpp -o helloworld
