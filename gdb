@@ -1,5 +1,5 @@
 1.编译
-    g++ -g  test.c -o test
+    g++ -g  test.c -o test  (-g生成调试信息)
 2.调试
     gdb test
 3.设置断点
