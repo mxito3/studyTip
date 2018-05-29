@@ -1,3 +1,5 @@
 git add test/
 git commit -m "commits"
+git status -s
 git push -u origin master
+git reset HEAD
