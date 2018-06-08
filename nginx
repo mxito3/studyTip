@@ -1,0 +1,15 @@
+1.启动 
+service nginx start
+2.重启
+service nginx restart
+3.centos重装nginx
+yum remove nginx
+yum install nginx
+4.配置网站根目录：
+修改/etc/nginx/nginx.conf
+在其中加入
+ server {
+             listen       80;
+             server_name  localhost;
+             root /home/dist;             //根目录
+         }
