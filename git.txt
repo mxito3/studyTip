@@ -3,3 +3,4 @@ git commit -m "commits"
 git status -s
 git push -u origin master
 git reset HEAD
+git pull origin //获取更新
