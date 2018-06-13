@@ -24,3 +24,5 @@ centos:
   https://www.linode.com/docs/development/java/install-java-on-centos/
   14.linux tools
   http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/gdb.html
+  15.学习网站
+  https://www.zhihu.com/question/274167076/answer/377260496
