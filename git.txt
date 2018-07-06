@@ -5,3 +5,7 @@ git push -u origin master
 git reset HEAD
 git pull origin //获取更新
 git rm -r --cached target  删除target文件夹
+配置个人的用户名称和电子邮件地址：
+$ git config --global user.name "runoob"
+$ git config --global user.email test@runoob.com
+全局配置加 --global ,不加的话可为某目录设置其他git用户
