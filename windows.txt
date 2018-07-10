@@ -4,3 +4,5 @@ dir /N
 netstat -anp|  findstr port
 taskkill -PID pid -F
 cd.>a.txt
+3.卸载软件残留
+windows install clean up
