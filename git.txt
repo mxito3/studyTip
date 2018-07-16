@@ -1,11 +1,18 @@
-git add test/
-git commit -m "commits"
+git add fileName   (暂存区的目录树将被更新，将为改动的文件创建新的对象并存在对象库，
+				index里面将存储对象所对应的索引)
+git commit -m "commits"     		暂存区的目录树写入对象库，master分支会做相应的更新
+                                     ，即master所指的目录树就是暂存区的目录树
 git status -s
 git push -u origin master
 git reset HEAD
 git pull origin //获取更新
-git rm -r --cached target  删除target文件夹
+git rm -r --cached target  从暂存区删除target文件夹
+git diff        查看尚未缓存的改动(未写入对象库的修改)
+git diff --cached    查看已经缓存的改动(写入对象库)
+
 配置个人的用户名称和电子邮件地址：
 $ git config --global user.name "runoob"
 $ git config --global user.email test@runoob.com
 全局配置加 --global ,不加的话可为某目录设置其他git用户
+
+git --chechout <fileName>  用暂存区的该文件覆盖工作区的名为fileName的文件
