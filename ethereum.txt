@@ -38,4 +38,7 @@ geth --syncmode "light" --rpc --rpccorsdomain "*"  --rpcapi "personal,db,eth,net
 
 
 **windows通过ipc连接本机节点
+cmd:
 geth attach \\.\pipe\geth.ipc
+git bash:
+geth attach \\\\.\\pipe\\geth.ipc
