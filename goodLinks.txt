@@ -26,3 +26,5 @@ centos:
   http://linuxtools-rst.readthedocs.io/zh_CN/latest/tool/gdb.html
   15.学习网站
   https://www.zhihu.com/question/274167076/answer/377260496
+  16.ubuntu安装docker
+  http://www.runoob.com/docker/ubuntu-docker-install.html
