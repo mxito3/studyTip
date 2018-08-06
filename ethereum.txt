@@ -1,44 +1,12 @@
-1.datadir
-  C:\Users\YP\AppData\Roaming\Ethereum
-  
-                                                   **rinkeby**
-2.命令：
-服务器：
-nohup /mnt/ethereum/go-ethereum-1.8.2/build/bin/geth --rinkeby --datadir "/mnt/ethereum/rinkeby" --rpc --rpccorsdomain "*"  --rpcapi "personal,db,eth,net,web3,miner,admin" --rpcaddr 0.0.0.0 &
-nohup /mnt/ethereum/go-ethereum-1.8.2/build/bin/geth --datadir "/mnt/ethereum" --rpcport 8546 --port 8547&
-tail -fn 50 nohup.out
-本机：
-geth --rinkeby --rpc --rpccorsdomain "*"  --rpcapi "personal,db,eth,net,web3,miner,admin" --rpcaddr 0.0.0.0 --bootnodes "enode://111e68cb3a8401ee42199fd64a0a460dc2c10b33cb74d97eb26f222600502842d296ced7172ed3da8884191dde2b04c6885f7240f39495eca7290efe553a278e@120.27.11.67:30303","enode://bda0e1b5db21b091332dcbbed16b53c8b14898f22d4b4b7f314b97440bc7ac841fdb16076e5dc220aea802d428ca8b35173eea9dae15e2632c1a3b06ebcf49c0@47.52.21.173:30303"
-3.remix
-https://remix.ethereum.org/
-4.attach use ipc
-/mnt/go-ethereum-1.8.2/build/bin/geth attach /mnt/ethereum/rinkeby/geth.ipc   找到ipc对应位置即可
-5.get rinkeby eth
- https://faucet.rinkeby.io/
- https://twitter.com/mxito3/status/988390838370582529
- https://plus.google.com/101061466734214019919/posts/F4oc2DBvFG7
-6.查询交易记录
-https://rinkeby.etherscan.io/tx/0x3385d59913f60353e1601d80fa9aabd97719c5fc46ba6eea16611c71a5cb832a
-
-                                                             **开发**
-1.web3.js
-https://github.com/ethereum/wiki/wiki/JavaScript-API       
-2.nonce in transaction 
-is the number of transactions sent from a given address. Each time you send a transaction, the nonce increases by 1
-                                                              **links** 
-1.what is nonce
-  https://myetherwallet.github.io/knowledge-base/transactions/what-is-nonce.html
-                   
-                   
-                                                             **本机主网**
-*********轻节点
-1.打开
-geth --syncmode "light" --rpc --rpccorsdomain "*"  --rpcapi "personal,db,eth,net,web3,miner,admin" --rpcaddr 0.0.0.0
-
-
-
-**windows通过ipc连接本机节点
-cmd:
-geth attach \\.\pipe\geth.ipc
-git bash:
-geth attach \\\\.\\pipe\\geth.ipc
+1.nonce
+    https://myetherwallet.github.io/knowledge-base/transactions/what-is-nonce.html
+    nonce是由一个地址发出的交易的总的数量，每发送一次交易，nonce++;
+2.windows通过ipc连接本机节点
+    cmd:
+    geth attach \\.\pipe\geth.ipc
+    git bash:
+    geth attach \\\\.\\pipe\\geth.ipc
+3.获得某一个合约new的合约：
+    获得地址之后获得abi,abi同样是在remix获得，不过把构造函数换成想要的合约的构造函数。
+4.metamask利用的节点
+    metemask利用的是infura提供的节点。
