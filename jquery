@@ -1,0 +1,4 @@
+1.获得某个被点击元素的自定义属性(index)
+    $('#left-bottom ul li').click(function(){
+		    console.log($(this).attr("index"));
+	    });
