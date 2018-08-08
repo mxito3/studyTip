@@ -56,4 +56,10 @@
     docker attach container_name/container_id
 12.重启,启动,停止
     docker restart/start/stop
-  
+ 
+13.更换国内源
+    vi ~/.bashrc
+    写入
+    export DOCKER_OPTS="--registry-mirror=https://registry.docker-cn.com"
+    source ~/.bashrc
+    sudo service docker restart
