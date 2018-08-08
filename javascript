@@ -23,3 +23,7 @@
         });
     }
     注意：前一个then的返回值是后一个then的返回值，promise里面要调用resolve函数。
+3.异常捕获
+    window.onerror或者addEventListener的方式添加全局的异常捕获监听函数。
+4.性能监控
+    
