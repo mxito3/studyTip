@@ -5,3 +5,55 @@
   
   镜像执行run方法得到一个容器,容器利用镜像提供的环境，docker执行commit方法把容器转化成一个镜像，其他
   用户可以pull这个镜像来创造其他镜像。
+3.查看容器
+  docker ps -a
+  docker ps   //show just running container
+  docker ps -q   //只展示运行的container的id
+4.查看容器日志
+  docker logs containId
+5.运行镜像
+  docker run -it ubuntu:latest /bin/bash
+  -d运行在后台 
+  -i保持标准输入打开,即使是在没有attach的情况下。
+  -t分配一个pseudo-TTY
+6.退出
+  exit
+7.将容器转化为镜像
+  (1)
+  docker commit -m "centos with git" -a "yapie" 9c810bd90333 yapie/centos:0.0.1
+  -a是一些基础信息 9c810bd90333是容器的id yapie/centos:0.0.1是指我后面要把它推到yapie的docker仓库里面。
+  (2)利用Dockerfile
+    Dockerfile是一些基础的配置信息
+    eg:
+        # 说明该镜像以哪个镜像为基础
+        FROM centos:latest
+
+        # 构建者的基本信息
+        MAINTAINER yapie
+
+        # 在build这个镜像时执行的操作
+        RUN yum update
+        RUN yum install -y git
+
+        # 拷贝本地文件到镜像中(当前文件夹到镜像的固定文件夹)
+        COPY ./* /usr/share/gitdir/   
+        
+    执行：docker build -t="yapie/centos:tag" .       -t后是docker用户的名字以及镜像的名字和版本。   .用来指定在当前目录寻找Dockerfile.  
+    
+8.停止,删除容器
+    docker stop containerId
+    docker rm containerId
+   
+9.删除镜像
+    docker rmi imageId
+    
+10.查看日志
+
+    docker logs containerId/containerName
+    
+11.后台启动后进入容器
+
+    docker attach container_name/container_id
+12.重启,启动,停止
+    docker restart/start/stop
+  
