@@ -1,0 +1,7 @@
+1.搜索镜像
+  docker search centos 
+2.获取镜像
+  docker pull centos
+  
+  镜像执行run方法得到一个容器,容器利用镜像提供的环境，docker执行commit方法把容器转化成一个镜像，其他
+  用户可以pull这个镜像来创造其他镜像。
