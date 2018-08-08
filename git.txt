@@ -16,3 +16,8 @@ $ git config --global user.email test@runoob.com
 全局配置加 --global ,不加的话可为某目录设置其他git用户
 
 git --chechout <fileName>  用暂存区的该文件覆盖工作区的名为fileName的文件
+
+查看版本
+git tag 
+切换到某个版本
+git --checkout - tagName
