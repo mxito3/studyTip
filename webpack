@@ -1,1 +1,4 @@
 
+1.对于生产环境的代码可能不能定位到具体出错的地方，可以用source-map来解决。
+      用法：在webpack.config.js中添加
+      devtool:'source-map'
