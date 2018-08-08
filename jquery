@@ -2,3 +2,41 @@
     $('#left-bottom ul li').click(function(){
 		    console.log($(this).attr("index"));
 	    });
+2.获取元素有变量的话可以拼接字符串。
+3.页面间传值:
+	比较简单的一种传值方式是利用jqeury提供的jquery.cookie来设置cookie保存在浏览器,无特别说明的时候该cookie的有效期是七天,其他页面只
+	需要从浏览器获取就可以了。
+	设置：$.cookie("cookieName",cookieValue);
+	获取：$.cookie('cookieName');
+4.插入html相关
+	$('key').after("html") //插入到key后，即作为key的平行节点
+	$('key').html('html')    //作为子元素插入	
+	
+	
+	插入多段相同的html的时候可以先插挂载点，在插入html
+	eg:
+	function insertHtml(insertPosition,insertContent,insertQuatity)
+	{
+		var haveInserted=0;
+		for(let i=0;i<insertQuatity;i++)
+		{
+		
+			if(i==0)
+			{
+				$(''+insertPosition).html("<div id=detail"+i+"></div>");
+			
+			}
+			else
+			{
+				var position=i-1; 
+				$('#detail'+position).after("<div id=detail"+haveInserted+"></div>");
+			}
+			haveInserted++;
+			$('#detail'+i).html(insertContent);
+		}
+	}	
+5.显示和隐藏
+	$('key').show();
+	$('key').hide();
+6.重定向
+	location.href='url'
