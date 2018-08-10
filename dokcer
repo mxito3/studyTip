@@ -63,3 +63,6 @@
     export DOCKER_OPTS="--registry-mirror=https://registry.docker-cn.com"
     source ~/.bashrc
     sudo service docker restart
+
+14.设置国内加速器
+    https://www.daocloud.io/mirror#accelerator-doc
