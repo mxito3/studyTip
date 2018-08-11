@@ -1,0 +1,15 @@
+1.官网:
+      https://hyperledger-fabric.readthedocs.io/en/release-1.1/samples.html
+2.bugs：
+    （1）.生成加密工具cryptogen的时候
+            vendor/github.com/miekg/pkcs11/pkcs11.go:29:18: fatal error: ltdl.h: No such file or directory
+            分析：应该是找不到一个c的头文件的意思
+            解决方案：sudo apt install libtool libltdl-dev
+            链接：https://stackoverflow.com/questions/43626320/ltdl-h-not-found-error-while-building-chaincode
+     (2). 用../../build/bin/configtxgen -profile TwoOrgsOrdererGenesis -outputBlock ./channel-artifacts/genesis.block生成创世区块的时候报错            Error loading MSP configuration for org OrdererOrg: Could not load a valid ca certificate from directory                                   /root/go/src/github.com/hyperledger/fabric/examples/e2e_cli/crypto-config/ordererOrganizations/example.com/msp/cacerts    
+           说的是找不到证书在/root/go/src/github.com/hyperledger/fabric/examples/e2e_cli/crypto-config/ordererOrganizations/example.com/msp/cacerts 
+           分析：应该是找不到证书的意思在/root/go/src/github.com/hyperledger/fabric/examples/e2e_cli/crypto-config/ordererOrganizations/example.com/msp/cacerts 
+                 目录下。
+           解决方案：利用cryptogen生成证书
+                     ../../build/bin/cryptogen generate --config=./crypto-config.yaml
+   
