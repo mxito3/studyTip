@@ -1,2 +1,9 @@
-  1.官网:
-  https://hyperledger-fabric.readthedocs.io/en/release-1.1/samples.html
+1.官网:
+      https://hyperledger-fabric.readthedocs.io/en/release-1.1/samples.html
+2.bugs：
+    （1）.生成加密工具cryptogen的时候
+    vendor/github.com/miekg/pkcs11/pkcs11.go:29:18: fatal error: ltdl.h: No such file or directory
+    应该是找不到一个c的头文件的意思
+    解决方案：sudo apt install libtool libltdl-dev
+    链接：https://stackoverflow.com/questions/43626320/ltdl-h-not-found-error-while-building-chaincode
+    
