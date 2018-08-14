@@ -50,7 +50,8 @@
 10.查看日志
 
     docker logs containerId/containerName
-    
+    docker logs -f containerId/containerName   查看日志并停留在容器
+
 11.后台启动后进入容器
 
     docker attach container_name/container_id
