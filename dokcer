@@ -46,6 +46,7 @@
    
 9.删除镜像
     docker rmi imageId
+    docker rmi -f $(docker images -aq) 强制删除所有
     
 10.查看日志
 
