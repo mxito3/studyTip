@@ -6,3 +6,5 @@ taskkill -PID pid -F
 cd.>a.txt
 3.卸载软件残留
 windows install clean up
+4.安装chocolatey
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
