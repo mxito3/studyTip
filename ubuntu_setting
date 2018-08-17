@@ -1,0 +1,3 @@
+1.移动菜单栏位置
+gsettings set com.canonical.Unity.Launcher launcher-position Bottom 移动到下方
+gsettings set com.canonical.Unity.Launcher launcher-position Left 移动到左方
