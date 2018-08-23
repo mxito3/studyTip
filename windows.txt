@@ -8,3 +8,9 @@ cd.>a.txt
 windows install clean up
 4.安装chocolatey
 @powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin
+5.修改cmd默认打开位置
+	打开注册表编辑器
+		win+r   regedit
+	找到HKEY_CURRENT_USER\Software\Microsoft\Command Processor
+
+	新建一个名为aoturun的字符串，内容是cd /d path(path是自己想设置的path)
