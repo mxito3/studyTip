@@ -1,0 +1,16 @@
+1.移动菜单栏位置
+gsettings set com.canonical.Unity.Launcher launcher-position Bottom 移动到下方
+gsettings set com.canonical.Unity.Launcher launcher-position Left 移动到左方
+2.调整当前窗口到某应用程序
+alt + tab
+win + w
+3.合并分区 
+  用departed
+      a. 先弄出空闲分区
+      b. 将该空闲分区移动到想要扩展的分区的上面或下面（可能需要禁用交换空间）
+      c. 设置要扩展的分区前后大小均为0即可
+      
+      
+      遇到的问题： 
+          想扩展的分区有锁，解决方案是挂载后者从u盘启动，因为要扩展/目录所以不能解挂。故制作ubuntu启动盘，发现启动之后按f12没有从u盘启动的选项，
+          google说可能启动盘做的有问题，重做了一个进入就好了。rufus制作的时候不用改任何东西，直接进行就好了，上面的信息是优盘的信息。
