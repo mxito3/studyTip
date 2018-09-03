@@ -10,3 +10,6 @@
     获得地址之后获得abi,abi同样是在remix获得，不过把构造函数换成想要的合约的构造函数。
 4.metamask利用的节点
     metemask利用的是infura提供的节点。
+5.enode address 
+    https://github.com/ethereum/py-evm/blob/0e3663568651dcdcd8b7e4a1341219f9252bba96/p2p/constants.py#L47-L65
+    https://github.com/ethereum/go-ethereum/blob/461291882edce0ac4a28f64c4e8725b7f57cbeae/params/bootnodes.go#L21-L30
