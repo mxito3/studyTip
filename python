@@ -1,3 +1,23 @@
-查看库的版本
+1.查看库的版本
   pip list
   pip freeze
+2.virtualenv
+安装：
+# Debian, Ubuntu
+sudo apt-get install python-virtualenv
+
+# CentOS, Fedora
+sudo yum install python-virtualenv
+
+# Arch
+sudo pacman -S python-virtualenv
+
+创建环境
+python -m venv venv  （python3）
+
+激活环境
+. venv/bin/activate
+
+安装依赖
+pip install -e .
+
