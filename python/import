@@ -1,0 +1,16 @@
+
+#./test/__init__.py
+def hello():
+    return "hello"
+
+1.import test
+        引入的是__init__.py的全部的内容
+        调用hello()  test.hello()
+2.from test import hello
+        导入的是__init__.py的hello函数,或者test文件夹下的hello.py的全部内容
+        当test包下有同名文件hello.py的时候优先引入__init__.py的hello函数
+3.from test import *
+        导入的是test包下的__init__.py的内容以及其中__all__定义的模块
+        eg:     
+        __all__=['test1']  同时导入test1模块
+

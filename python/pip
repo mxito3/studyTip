@@ -1,0 +1,3 @@
+1.查看库的版本
+  pip list
+  pip freeze
