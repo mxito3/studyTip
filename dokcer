@@ -69,3 +69,7 @@
 14.设置国内加速器
     https://www.daocloud.io/mirror#accelerator-doc
     curl -sSL https://get.daocloud.io/daotools/set_mirror.sh | sh -s http://80da0c3b.m.daocloud.io
+15.多个终端连接docker 
+    PID=$(docker inspect --format "{{ .State.Pid }}" <container>) //将<container>换成你的容器id 
+    nsenter --target $PID --mount --uts --ipc --net --pid 
+    
