@@ -1,3 +1,5 @@
 1.查看库的版本
   pip list
   pip freeze
+2.pip install提示build failed
+  sudo apt-get install python-pip python-dev libffi-dev libssl-dev libxml2-dev libxslt1-dev libjpeg8-dev zlib1g-dev
