@@ -13,3 +13,7 @@ yum install nginx
              server_name  localhost;
              root /home/dist;             //根目录
          }
+5.使用多核多处理器
+worker_processes 8;
+worker_cpu_affinity 0001 0010 0100 1000 0001 0010 0100 1000;
+注意：要写在　/etc/nginx/nginx.conf的顶部
