@@ -4,9 +4,11 @@
 mysqladmin -u root -p create Blog
 create database Blog;
 2.导入表
-source a.sql;
-3.root
-mysql -u root -p
+create database test;
+use test;
+source ~/a.sql;
+3.导出
+mysqldump -u 用户名 -p 数据库名 > 导出的文件名 
 4.描述表
 desc tableName;(表格的形式)
 5.读取数据表
