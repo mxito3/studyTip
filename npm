@@ -1,0 +1,6 @@
+1.切换源
+  sudo npm install -g nrm
+  nrm是npm源的管理器
+  用法：
+    nrm ls   //列出源
+    nrm use sourceName   //sourceName是ls中的某一个
