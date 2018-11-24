@@ -1,9 +1,0 @@
-1. 素性检测
-  Eratosthenes筛选法
-  求小于n的所有素数
-    求小于的sqr(n)的所有素数，然后剔除掉这些素数的倍数剩下的就是左右素数。
-2.a**m mod e
-  将m分解为dn-1dn-2...d1d0的二进制形式,如果e可以表示为⼆二进制数dn-1dn-2...d1d0, 这⾥里里di = 0或1 ,e = dn-1 * 2n-1 +…+ d1 * 2 + d0 = Dn-1 +… + 
-  D1 + D0 (Di = di * 2i)因此, ae = aDn-1 * aDn-2 *…* aD1 * aD0
-  分治计算: Ai = aDi mod m, i = 0, 1,…, n-1 ➡ a2i+1 mod m = (a2i mod m) * (a2i mod m) mod m   ➡ 计算O(log2e)次 
-  ❖ 归并: (An-1 *…* A0) mod m 
