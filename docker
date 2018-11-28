@@ -72,4 +72,5 @@
 15.多个终端连接docker 
     PID=$(docker inspect --format "{{ .State.Pid }}" <container>) //将<container>换成你的容器id 
     nsenter --target $PID --mount --uts --ipc --net --pid 
-    
+16.查看不能使用netstat的容器的监听端口
+  sudo nsenter -t $(docker inspect -f '{{.State.Pid}}' containerID) -n netstat -an
