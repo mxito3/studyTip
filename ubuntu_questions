@@ -18,3 +18,9 @@ win + w
 4.设置console语言为英文
     export LC_ALL=C 
     取消unset LC_ALL
+5.禁用ipv6(docker用ipv6有问题)
+     在/etc/default/grub 加上GRUB_CMDLINE_LINUX="ipv6.disable=1"
+     sudo update-grub
+     reboot
+     
+     
