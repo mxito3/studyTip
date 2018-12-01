@@ -74,3 +74,22 @@
     nsenter --target $PID --mount --uts --ipc --net --pid 
 16.查看不能使用netstat的容器的监听端口
   sudo nsenter -t $(docker inspect -f '{{.State.Pid}}' containerID) -n netstat -an
+17.查看网络：
+    docker network ls 
+18.进入容器：    
+    docker exec -it container /bin/sh
+19.删除容器：
+    docker rm $(docker ps -aq)
+20.删除网络：
+    docker network prune
+21.查看ip地址：
+    docker inspect -f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)
+22.netstat:
+    sudo nsenter -t $(docker inspect -f '{{.State.Pid}}' aafdf7e61651) -n netstat -an        
+23.commit:
+    docker commit -m "fix" -a "fix0" bd7436d66b09  yapie/catapult-rest-server:0.0.1
+24.dockerfile生成镜像:
+    docker build  . -t yapie/generate-config:0.0.1
+25.挂载目录跑
+    docker run -it -v ./bin/ash:/bin-mount -v ./ruby:/ruby -v ./build/generated-addresses:/addresses -v ./build/catapult-config:/config-build -v ./build/nemesis:/nemesis:rw -v ./build/state:/state:rw yapie/generate-config:0.0.1 /bin/sh
+  
