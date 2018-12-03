@@ -4,3 +4,6 @@
   用法：
     nrm ls   //列出源
     nrm use sourceName   //sourceName是ls中的某一个
+2.权限问题
+  修改权限不行的情况下
+  npm install --unsafe-perm ...
