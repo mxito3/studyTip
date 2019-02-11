@@ -1,0 +1,23 @@
+{
+    "server":"hkc.sswhite.ml",
+    "server_ipv6": "::",
+    "server_port":24630,	
+    "local_address": "127.0.0.1",
+    "local_port": 1080,
+    "password":"password",		
+    "method":"rc4-md5",			
+    "protocol": "auth_sha1_v4",		
+    "protocol_param": "bing.com,jd.hk",
+    "obfs": "http_simple",		
+    "obfs_param": "bing.com,jd.hk",	
+    "speed_limit_per_con": 0,
+    "speed_limit_per_user": 0,
+    "additional_ports" : {}, 
+    "additional_ports_only" : false, 
+    "timeout": 120,
+    "udp_timeout": 60,
+    "dns_ipv6": false,
+    "connect_verbose_info": 0,
+    "redirect": "",
+    "fast_open": false
+}
