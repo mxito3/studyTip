@@ -21,3 +21,14 @@ git --chechout <fileName>  用暂存区的该文件覆盖工作区的名为fileN
 git tag 
 切换到某个版本
 git --checkout - tagName
+
+代理设置
+git config --global https.proxy https://127.0.0.1:1081
+git config --global http.proxy https://127.0.0.1:1081
+
+git config --global --unset http.proxy
+
+git config --global --unset https.proxy
+
+git config delete proxy
+
