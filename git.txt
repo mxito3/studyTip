@@ -34,3 +34,7 @@ git config delete proxy
 
 查看仓库的config
 You can use git config --list, or look at your ~/.gitconfig file. Local config will be in your repository's .git/config file.
+
+
+git tag
+https://stackoverflow.com/questions/35979642/what-is-git-tag-how-to-create-tags-how-to-checkout-git-remote-tags
