@@ -32,3 +32,5 @@ git config --global --unset https.proxy
 
 git config delete proxy
 
+查看仓库的config
+You can use git config --list, or look at your ~/.gitconfig file. Local config will be in your repository's .git/config file.
