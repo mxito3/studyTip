@@ -38,3 +38,50 @@ You can use git config --list, or look at your ~/.gitconfig file. Local config w
 
 git tag
 https://stackoverflow.com/questions/35979642/what-is-git-tag-how-to-create-tags-how-to-checkout-git-remote-tags
+
+
+添加其他仓库的东西
+git remote add true-test https://github.com/ethereum/aleth
+获得true-test的更新
+git pull true-test
+合并
+git merge true-test/tagName
+查看合并冲突的文件
+git diff --name-status --diff-filter=U
+处理冲突
+git mergetool
+Step 3: You will see a vimdiff display in following format
+
+  +----------------------+
+  |       |      |       |
+  |LOCAL  |BASE  |REMOTE |
+  |       |      |       |
+  +----------------------+
+  |      MERGED          |
+  |                      |
+  +----------------------+
+These 4 views are
+
+LOCAL – this is file from the current branch
+
+BASE – common ancestor, how file looked before both changes
+
+REMOTE – file you are merging into your branch
+
+MERGED – merge result, this is what gets saved in the repo
+
+选择哪个文件将被合并
+
+If you want to get changes from REMOTE
+
+:diffg RE  
+If you want to get changes from BASE
+
+:diffg BA  
+If you want to get changes from LOCAL
+
+:diffg LO 
+Step 5. Save, Exit, Commit and Clean up
+保存并退出
+:wqa save and exit from vi
+ 
