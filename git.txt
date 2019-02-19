@@ -85,3 +85,5 @@ Step 5. Save, Exit, Commit and Clean up
 保存并退出
 :wqa save and exit from vi
  
+- 取消合并分支
+git reset --hard <commit_before_merge>
