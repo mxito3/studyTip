@@ -92,3 +92,8 @@ git reset --hard <commit_before_merge>  #修改head指向之前的commit
 
 - 子模块更新
 https://github.com/tj/git-extras/pull/80
+
+- tag
+删除远程的tag
+git push --delete origin v0.0.0.1-gkchain
+
