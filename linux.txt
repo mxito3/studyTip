@@ -82,6 +82,9 @@
              -c  计算字符的数目
              -l  计算行的数目
              -w 计算单词的数目
+	57.wget使用proxy
+	
+	sudo wget -e https_proxy=$all_proxy https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tgz
 
 
 	
