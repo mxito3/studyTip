@@ -85,7 +85,8 @@
 	57.wget使用proxy
 	
 	sudo wget -e https_proxy=$all_proxy https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tgz
-
+        58.自启动service 
+	systemctl enable serviceName
 
 	
 	
