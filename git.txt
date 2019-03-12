@@ -97,3 +97,7 @@ https://github.com/tj/git-extras/pull/80
 删除远程的tag
 git push --delete origin v0.0.0.1-gkchain
 
+- 新建tag
+git tag mytag master
+- push新tag
+git push origin <tag_name>
