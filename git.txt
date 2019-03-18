@@ -101,3 +101,7 @@ git push --delete origin v0.0.0.1-gkchain
 git tag mytag master
 - push新tag
 git push origin <tag_name>
+
+
+# 只克隆某个仓库的一个分支
+git clone --single-branch --branch <branchname> host:/dir.git
