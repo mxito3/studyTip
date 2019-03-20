@@ -49,6 +49,12 @@ git pull true-test
 git merge true-test/tagName
 查看合并冲突的文件
 git diff --name-status --diff-filter=U
+
+#设置冲突处理工具
+git config merge.tool vimdiff
+git config merge.conflictstyle diff3
+git config mergetool.prompt false
+
 处理冲突
 git mergetool
 Step 3: You will see a vimdiff display in following format
@@ -85,7 +91,15 @@ If you want to get changes from LOCAL
 Step 5. Save, Exit, Commit and Clean up
 保存并退出
 :wqa save and exit from vi
- 
+
+
+#主分支冲突
+git fetch origin
+git pull origin master
+git checkout --ours filename
+git checkout --thiers filename
+git add filename
+git commit -m "use local/remote file"
 - 取消合并分支
 git reset --hard <commit_before_merge>  #修改head指向之前的commit
 
@@ -105,3 +119,6 @@ git push origin <tag_name>
 
 # 只克隆某个仓库的一个分支
 git clone --single-branch --branch <branchname> host:/dir.git
+
+
+
