@@ -120,5 +120,7 @@ git push origin <tag_name>
 # 只克隆某个仓库的一个分支
 git clone --single-branch --branch <branchname> host:/dir.git
 
-
+# ignore不起作用
+原因是.gitignore只对untack 的文件有效
+git rm -r --cached .   #删除本地缓存
 
