@@ -97,7 +97,7 @@ Step 5. Save, Exit, Commit and Clean up
 git fetch origin
 git pull origin master
 git checkout --ours filename
-git checkout --thiers filename
+git checkout --theirs filename
 git add filename
 git commit -m "use local/remote file"
 - 取消合并分支
