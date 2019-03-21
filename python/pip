@@ -8,3 +8,7 @@
 
   安装requirements.txt依赖
   pip install -r requirements.txt  
+4. pip清华源
+vi ~/.pip/pip.conf 
+[global]
+ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
