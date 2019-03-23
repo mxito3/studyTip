@@ -124,3 +124,6 @@ git clone --single-branch --branch <branchname> host:/dir.git
 原因是.gitignore只对untack 的文件有效
 git rm -r --cached .   #删除本地缓存
 
+# 删除本地和远程分支
+git branch -d debug1
+git push origin --delete debug1
