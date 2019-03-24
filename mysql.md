@@ -1,61 +1,92 @@
-
-**备注：Blog是表名和数据库名，blog，employee_tbl是表名字
 - 创建数据库
+```sql
 mysqladmin -u root -p create Blog
 create database Blog;
+```
 - 导入表
+```sql
 create database test;
 use test;
 source ~/a.sql;
+```
 - 导出
+```sql
 mysqldump -u 用户名 -p 数据库名 > 导出的文件名 
+```
 - 描述表
+```sql 
 desc tableName;(表格的形式)
+```
 - 读取数据表
+```sql
 select * from tableName;
+```
 - 创建表
+```sql
 create table if not exists blog(id int primary key auto_increment,title char not null,comment longtext not null);
+
+```
 - 删除数据库
+```sql
 mysqladmin -uroot -p drop Blog
 drop database Blog;
+```
 - 删除表
+```sql
 drop table Blog;
+```
 - 插入内容：
+```sql
 insert into Blog (id,title,comment)values(2,"hello","hello world")  //可以不插入id字段，因为是自增的
 insert into blog(title,text) values("ede","deede"),("dededede","defegrfgtg"); //插入多条数据
+```
 - where语句
+```sql
 select * from blog where binary comment="hello Yp";                //binary指定区分大小写
 select * from blog where id>=1;  
 select id from blog where id>1;
+```
 - update语句
+```sql
 update blog set text="i love such life" where id=4;
+```
 - delete语句
+```sql
 delete from blog where id =1;    //删除blog表中id是1的记录
+```
 - like语句
+```sql
 select * from blog where text like "%such%";     //%匹配所有字符串
+```
 - union语句
+```sql
 select text from blog where text="i love such world! union select country from apps where country="cn";
 select text title from blog where text="i love such life" and  title like "%i" union select country from apps where country="cn";
+```
 - 排序
+```sql
 select * from blog order by id asc;//升序
 select * from blog order by id desc;//降序
+```
 - 分组(group by语句)
+```sql
 select name, count(*) from employee_tbl group by name;   //根据name分组，结果是一个两列属性分别是name和count(*)的二维表,count(*)值是每个不同名字的数量 
 select name,sum(singin) as signinCount from employee_tbl group by name; //一列是name,另一列是signinCount(属性singin的和)
 select name,sum(singin) as signinCount from employee_tbl group by name with rollup;//with rollup在分组的基础上再进行一次相同的统计(sum,即给signin列求和，name属性是null)
 select coalesce(name,'总数'),sum(singin) as signinCount from employee_tbl group by name with rollup;//在上一条分组的基础上修改name值为空的记录的name属性是总数
-
+```
 - 连接(join/right join/left join)
+```sql
 select a.runoob_id,a.runoob_author,b.runoob_count from runoob_tbl a join tcount_tbl b on a.runoob_author=b.runoob_author;
 select a.runoob_id,a.runoob_author,b.runoob_count from runoob_tbl a left join tcount_tbl b on a.runoob_author=b.runoob_author;
 //以左表为基础，连接之后的表的runoob_author是左表的全部
 select a.runoob_id,a.runoob_author,b.runoob_count from runoob_tbl a right join tcount_tbl b on a.runoob_author=b.runoob_author;
 //以右表为基础，连接之后的表的runoob_author是右表的全部
 格式：......join tableName on somecheck
-
+```
 
 - 一对多关系
-```mysql
+```sql
 create table `users` (
     `id` int unsigned not null auto_increment, 
     `name` varchar(100) not null, 
@@ -70,9 +101,8 @@ create table `phone_numbers` (
     foreign key (`user_id`) references users(`id`) on delete cascade, 
     primary key(`id`) 
 ); 
-```
-现在，您可以轻松地通过简单的连接获取用户的电话号码;
-```sql
+
+//现在，您可以轻松地通过简单的连接获取用户的电话号码;
 select 
     pn.`phone_number` 
 from 
