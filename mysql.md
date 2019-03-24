@@ -112,3 +112,15 @@ where
     u.`name`='John' 
     and 
 ```
+- 多对多关系
+```sql
+需求：
+1）一个学生可以学多门课
+2）一个课有多个学生学学生表和课程表之间多对多关系需要借助中间表,在中间表中维护学生和课程的关系
+create Table student(num varchar(20) primary key,name varchar(10));
+create table course(id varchar(20) primary key,name varchar(50));
+create table selectCourse(id int auto_increment primary key,sid varchar(20),cid varchar(20),
+//一般需要在中间表中 用两个外键来关联两个表
+constraint fk_sid foreign key (sid) references student(num),
+constraint fk_cid foreign key (cid) references course(id));
+```
