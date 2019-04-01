@@ -1,0 +1,13 @@
+[Unit]
+Description=gk rpc service
+After=network.target
+[Service]
+Type=simple
+Restart=always
+StartLimitInterval=0
+RestartSec=1
+User=%I
+ExecStart=/opt/kcptun/client_linux_amd64 -c /opt/kcptun/vps.json
+
+[Install]
+WantedBy=multi-user.target
