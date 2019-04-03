@@ -124,3 +124,27 @@ create table selectCourse(id int auto_increment primary key,sid varchar(20),cid 
 constraint fk_sid foreign key (sid) references student(num),
 constraint fk_cid foreign key (cid) references course(id));
 ```
+- 用事件写定时任务
+
+```sql
+delimiter //
+create procedure reset_reward_daily()
+begin
+update  reward_check set is_reward=0;
+end//
+delimiter ;
+
+
+create event reset_daily
+on schedule every 1 day
+STARTS '2019-04-05 00:00:00'
+do call reset_reward_daily();
+
+alter event reset_daily on completion preserve enable;//打开定时任务
+alter event reset_daily on completion preserve disable;//关闭定时任务
+```
+- 删除event
+```sql
+DELETE FROM mysql.event
+WHERE db = 'reward';
+```
