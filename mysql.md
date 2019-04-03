@@ -148,3 +148,7 @@ alter event reset_daily on completion preserve disable;//关闭定时任务
 DELETE FROM mysql.event
 WHERE db = 'reward';
 ```
+- 打开调度器
+```sql
+SET @@global.event_scheduler = 1;
+```
