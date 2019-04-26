@@ -5,4 +5,6 @@
 ```
 # netstat 
 查看占用某端口的进程的pid
+```shell
 sudo netstat -antup | grep 30303
+```
