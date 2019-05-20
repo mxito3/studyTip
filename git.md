@@ -57,7 +57,9 @@ git config merge.conflictstyle diff3
 git config mergetool.prompt false
 ```
 - 处理冲突
+```git
 git mergetool
+```
 Step 3: You will see a vimdiff display in following format
 
   +----------------------+
@@ -94,7 +96,7 @@ Step 5. Save, Exit, Commit and Clean up
 :wqa save and exit from vi
 
 
-#主分支冲突
+# 主分支冲突
 ```git
 git fetch origin
 git pull origin master
@@ -104,31 +106,43 @@ git add filename
 git commit -m "use local/remote file"
 ```
 - 取消合并分支
+```git
 git reset --hard <commit_before_merge>  #修改head指向之前的commit
-
+```
 
 - 子模块更新
 https://github.com/tj/git-extras/pull/80
 
-- tag
-删除远程的tag
+# tag
+- 删除远程的tag
+```git
 git push --delete origin v0.0.0.1-gkchain
-
+```
 - 新建tag
+```git
 git tag mytag master
+```
 - push新tag
+```git
 git push origin <tag_name>
-
+```
 - 只克隆某个仓库的一个分支
+```git
 git clone --single-branch --branch <branchname> host:/dir.git
-
+```
 - ignore不起作用
 原因是.gitignore只对untack 的文件有效
+```git
 git rm -r --cached .   #删除本地缓存
-
+```
 - 删除本地和远程分支
+```git
 git branch -d debug1
 git push origin --delete debug1
-
+```
 - 配置文件位置
 ~/.gitconfig
+- 改变仓库url
+ ```git
+ git remote set-url origin url 
+```
