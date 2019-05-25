@@ -1,0 +1,11 @@
+在/usr/local/applications下创建.desktop文件
+文件内容如下
+[Desktop Entry]
+Name=Navicat
+Comment=Database Admin Tool
+Exec=/bin/sh  "/opt/navicat/start_navicat"
+Icon=/path/to/icon
+Terminal=false
+Type=Application
+Categories=Wine;
+StartupNotify=true
