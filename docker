@@ -83,7 +83,7 @@
 20.删除网络：
     docker network prune
 21.查看ip地址：
-    docker inspect -f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)
+    docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}} ' $(docker ps -aq)
 22.netstat:
     sudo nsenter -t $(docker inspect -f '{{.State.Pid}}' aafdf7e61651) -n netstat -an        
 23.commit:
