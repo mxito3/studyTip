@@ -92,4 +92,7 @@
     docker build  . -t yapie/generate-config:0.0.1
 25.挂载目录跑
     docker run -it -v ./bin/ash:/bin-mount -v ./ruby:/ruby -v ./build/generated-addresses:/addresses -v ./build/catapult-config:/config-build -v ./build/nemesis:/nemesis:rw -v ./build/state:/state:rw yapie/generate-config:0.0.1 /bin/sh
-  
+26.push到docker hub
+    docker login --username username --password password
+    docker tag my-image username/my-repo
+    docker push username/my-repo
