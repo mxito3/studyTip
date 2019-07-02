@@ -7,3 +7,5 @@
 2.权限问题
   修改权限不行的情况下
   npm install --unsafe-perm ...
+3. nvm
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
