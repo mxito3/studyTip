@@ -96,3 +96,5 @@
     docker login --username username --password password
     docker tag my-image username/my-repo
     docker push username/my-repo
+27. 不需root权限跑docker
+    sudo usermod -aG docker ${USER}
