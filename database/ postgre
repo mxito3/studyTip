@@ -1,0 +1,13 @@
+1. 连接
+    psql -U postgres  -h localhost  -p 5432 -d c2c_test
+2. 导出数据
+    c2c 
+        pg_dump --host localhost --port 5432 --username postgres > c2c_test.sql c2c_test  #c2c_test是表的名字
+    bigbang:
+        pg_dump --host localhost --port 5432 --username postgres > bigbang.sql new_bigbang  
+
+        scp root@47.244.12.83:/root/bigbang.sql  ~
+
+3. 导入数据
+    psql -h 127.0.0.1 -d new_bigbang -U postgres -f bigbang.sql
+    

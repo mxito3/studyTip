@@ -152,3 +152,27 @@ WHERE db = 'reward';
 ```sql
 SET @@global.event_scheduler = 1;
 ```
+- 开启外网访问
+```shell
+    开放 0.0.0.0
+    vi /etc/mysql/my.cnf
+    [mysqld]
+    #skip-grant-tables
+    bind-address=0.0.0.0
+    
+    设置密码登录
+    GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'youpassword' WITH GRANT OPTION;
+    FLUSH PRIVILEGES;
+
+    限制ip
+    GRANT ALL PRIVILEGES ON *.* TO 'jack'@'10.10.50.127' IDENTIFIED BY '654321' WITH GRANT OPTION;
+```
+- 更改密码
+```    
+    vi /etc/mysql/my.cnf
+    [mysqld]
+    skip-grant-tables
+    use mysql
+    update user set authentication_string=PASSWORD("domore0325") where user='root';
+```
+    
