@@ -98,3 +98,5 @@
     docker push username/my-repo
 27. 不需root权限跑docker
     sudo usermod -aG docker ${USER}
+28. 删除停止的容器
+    hdocker rm `docker ps -a|grep Exited|awk '{print $1}'`
