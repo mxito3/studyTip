@@ -12,3 +12,5 @@ sudo netstat -antup | grep 30303
 下载服务器文件夹
 scp  -r name@ip:/home/xhy/github/blockchain_service ./
 
+# 查看sudo user
+grep -Po '^sudo.+:\K.*$' /etc/group
