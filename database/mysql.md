@@ -176,3 +176,14 @@ SET @@global.event_scheduler = 1;
     update user set authentication_string=PASSWORD("domore0325") where user='root';
 ```
     
+## 全局变量
+    - 查询global变量
+    show global variables like 'wait_timeout%';
+    show global variables  where variable_name like "wait_timeout%";
+
+    - 查询session变量
+    show session variables like 'wait_timeout';
+    show session variables  where variable_name like "wait_timeout%";
+
+    - 设置全局变量
+    set global wait_timeout=60;
