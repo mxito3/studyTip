@@ -1,0 +1,12 @@
+venv/
+**/__pycache__/
+.pytest_cache/
+nohup.out
+*.pyc
+*.log
+.idea/
+new_bigbang/local_database.py
+.idea/
+logs/
+local*.py
+log
