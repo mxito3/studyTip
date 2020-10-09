@@ -173,7 +173,7 @@ SET @@global.event_scheduler = 1;
     [mysqld]
     skip-grant-tables
     use mysql
-    update user set authentication_string=PASSWORD("domore0325") where user='root';
+    update user set authentication_string=PASSWORD("") where user='root';
 ```
     
 ## 全局变量
