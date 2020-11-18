@@ -175,7 +175,22 @@ SET @@global.event_scheduler = 1;
     use mysql
     update user set authentication_string=PASSWORD("") where user='root';
 ```
-    
+
+- 修改字符集为utf8-mb4
+> vim /etc/my.cnf
+# 对本地的mysql客户端的配置
+[client]
+default-character-set = utf8mb4
+
+# 对其他远程连接的mysql客户端的配置
+[mysql]
+default-character-set = utf8mb4
+
+# 本地mysql服务的配置
+[mysqld]
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
 ## 全局变量
     - 查询global变量
     show global variables like 'wait_timeout%';
