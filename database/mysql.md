@@ -177,6 +177,7 @@ SET @@global.event_scheduler = 1;
 ```
 
 - 修改字符集为utf8-mb4
+```shell
 > vim /etc/my.cnf
 # 对本地的mysql客户端的配置
 [client]
@@ -191,6 +192,7 @@ default-character-set = utf8mb4
 character-set-client-handshake = FALSE
 character-set-server = utf8mb4
 collation-server = utf8mb4_unicode_ci
+```
 ## 全局变量
     - 查询global变量
     show global variables like 'wait_timeout%';
